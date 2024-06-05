@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graficar funciones con GeoGebra</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="ggb-element" class="graph"></div>
+      <div class="input-section">
+        <h3>Ingresar Restricciones:</h3>
+        <input
+          type="text"
+          id="funciones-input"
+          class="input-field"
+          placeholder="Ingrese restricciones separadas por comas"
+        />
+      </div>
+      <div class="input-section">
+        <h3>Ingresar Función Objetivo:</h3>
+        <input
+          type="text"
+          id="objetivo-input"
+          class="input-field"
+          placeholder="Ej: 3x + 5y"
+        />
+      </div>
+      <div class="button-container">
+        <button onclick="graficarFunciones()">Graficar Funciones</button>
+        <button onclick="maximizar()">Maximiza</button>
+        <button onclick="minimizar()">Minimiza</button>
+      </div>
+      <div id="intersections" class="intersection-section">
+        <h3>Intersecciones:</h3>
+        <ul id="intersection-list"></ul>
+      </div>
+      <div class="result-section">
+        <h2>Resultados</h2>
+        <pre id="resultados"></pre>
+      </div>
+    </div>
+  </body>
+</html>
